@@ -1,0 +1,463 @@
+/* 1. Color Property
+/* There are 4 types to add color is css.
+
+ Element Selector 
+body{
+    background-color: rgb(41, 41, 41);
+}
+ Id Selector 
+#p1{
+    color: tomato;
+}
+#p2{
+    color: rgb(102, 222, 255);
+}
+#p3{
+    color: #59ff5f;
+}
+#p4{
+    color: hsl(283, 100%, 64%);
+}
+*/
+
+/* 2. font Property
+h1{
+    font-family: Verdana, Arial;
+}
+p{
+    font-family: "lucida console", "courier new";
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+*/
+
+/* 3. Border Property
+h1{
+    border-style: ridge;
+    border-width: 5px;
+    border-color: blueviolet;
+    border-radius: 20px;
+}
+p{
+    border-bottom: 4px solid red;
+    border-top: 4px solid yellow;
+    border-left: 4px dotted purple;
+    border-right: 4px dotted blue;
+
+    border-radius:  10px;
+}
+*/
+
+/* 4. Shadow Property(1st for horizontal & 2nd for vertucal , 3rd for blur)
+h1{
+    text-shadow: 3px 3px 5px red, 4px 4px 6px blue;
+}
+#box1{
+    width:  100px;
+    height:  100px;
+    background-color: lightgray;
+    box-shadow: 4px 4px 6px;
+}
+*/
+
+/* 5. Margins Property
+body{
+    margin: 0px;
+}
+.box{
+    border: 5px solid;
+    font-size: 4em;
+    width: 250px;
+    height: 250px;
+}
+#box1{
+    background-color: tomato;
+    margin-top: 50px;
+    margin-left: auto;
+}
+#box2{
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: cyan;
+}
+*/
+
+/* 6. float Property
+body{
+    border: 5px solid rgb(35, 28, 26);
+    display: flow-root;
+}
+#img1{
+    float: left;
+    margin-right: 10px;
+}
+#img2{
+    float: right;
+    margin-left: 10px;
+}
+*/
+
+/* 7. Overflow Property (use visible,hidden,scroll,clip,auto)
+div{
+    border: 2px solid;
+    height: 75px;
+    overflow: scroll;
+}
+*/    
+
+/* 8. Display Property(use block, inline, inline-block, none) 
+div{
+    background-color: tomato;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+span{
+    background-color: rgb(20, 143, 185);
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+*/
+
+/* 9. Width & Height Property 
+*{
+    box-sizing: border-box;
+}
+.container{
+    background-color: grey;
+    height: 100vh;
+}
+.box{
+    background-color: white;
+    border: 2px solid;
+    padding: 25px;
+    height: auto;
+    width: 50%;
+    float: left;
+    text-align: center;
+
+    min-height: 50%;
+}
+*/    
+
+/* 10. Positions:
+            relative = positioned relative to where it normally.
+            fixed = positioned relative to the viewport.
+            absolute = positioned relative to nearest ancestor.
+            sticky = positioned based on scroll position.
+            static = default position for an element. 
+    #box1{
+        width: 200px;
+        height: 200px;
+        background-color: cyan;
+        position: fixed;
+        top:100px;
+        left: 100px;
+    }        
+    #box2{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        top:50px;
+        left: 50px;
+    }   
+*/      
+
+/* 11. Background Image 
+body{
+    background-image: url(saitama.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+*/
+
+/* 12. Combinators = explains the relationship between listed selectors
+                      = descendant
+                    > = child
+                    ~ = general sibling
+                    + = adjacent sibling 
+
+#container{
+    border: 2px solid;
+}
+/* space(" ") we use descendant means #1, #2 & #3
+#container p{
+    background-color: yellow;
+}
+*/
+/* > for child means #1 & #2
+#container > p{
+    background-color: tomato;
+}
+*/
+/* ~ for general sibling means #4 & #5 
+#container ~ p{
+    background-color: purple;
+}
+*/
+/* + for adjacent sibling means #4 over #5
+#container + p{
+    background-color: blue;
+}
+*/
+
+/* 13. Pseudo classes = they are keywords(like hover, active, link, visited)
+a:link{
+    color: rgb(33, 59, 138);
+}
+a:hover{
+    color: tomato;
+    font-size: 1.1em;
+}
+a:active{
+    color: yellow;
+    font-size: 1.1em;
+}
+a:visited{
+    color: grey;
+}
+
+li:hover{
+    background-color: yellow;
+}
+li:not(:hover){
+    background-color: rgb(72, 72, 70);
+}
+li:nth-child(3n+1){
+    background-color: brown;
+}
+
+#greeting p{
+    background-color: cyan;
+    padding: 10px;
+    display: none;
+}
+#greeting:hover p{
+    display: block;
+}
+*/
+
+/* 14. Psuedo Elements 
+h1::first-letter{
+    font-size: 2em;
+    font-style: italic;
+}
+p::first-line{
+    background-color: yellow;
+}
+p::selection{
+    color: red;
+    background-color: lightblue;
+}
+#fruit li::before{
+    
+}
+#apple::after{
+    content: "🍎";
+}
+#orange::after{
+    content: "🍊";
+}
+#mango::after{
+    content: "🥭";
+}
+#fruit li::marker{
+    content: "✔️";
+    color: green;
+    font-size: 1.2em;
+}
+*/
+
+/* 15. Pagination 
+.pagination{
+    text-align: center;
+}
+.pagination a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+.pagination a.active{
+    background-color: greenyellow;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.pagination a:hover:not(.active){
+    background-color: rgb(177, 177, 178);
+    border-radius: 5px;
+} 
+*/
+
+/* 16. Dropdown Menus 
+.dropdown{
+    display: inline-block;
+}
+.dropdown button{
+    background-color: hsl(0, 0%, 80%);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 95%);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+}
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown button:hover{
+    background-color: antiquewhite;
+}
+.dropdown a:hover{
+    background-color: rgb(227, 142, 38);
+}
+*/
+
+/* 17. Navigation Bar 
+body{
+    margin: 0px;
+}
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1{
+    text-align: center;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: black;
+}
+.navbar li{
+    float: left;
+}
+*/
+
+/* 18. Website Layout 
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+header{
+    background-color: lightgrey;
+    text-align: center;
+    padding: 25px;
+}
+.navbar{
+    background-color: black;
+    height: 50px;
+}
+aside{
+    width: 20%;
+    float: left;
+    padding: 10px;
+}
+section{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+article{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+footer{
+    background-color: lightgrey;
+    text-align: center;
+    padding: 25px;
+    display: block;
+    clear: both;
+}
+@media screen and (max-width:600px){
+    aside, section, article{
+        width: 100%;
+    }
+}
+*/
+
+/* 19. Image Gallery 
+.gallery{
+    display: inline-block;
+    border: 1px solid grey;
+    margin: 2px;
+    width: 190px;
+}
+.gallery .description{
+    padding: 10px;
+    text-align: center;
+}
+.gallery:hover{
+    border: 1px solid rgb(20, 13, 13);
+}
+.gallery img{
+    width: 100%;
+    height: auto;
+}
+*/
+
+/* 20. FlexBox 
+.container{
+    display: flex;
+    height: 90vh;
+    border: 10px solid black;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    column-gap: 3em;
+    row-gap: 3em;
+}
+.box{
+    height: 150px;
+    width: 150px;
+    font-size: 6em;
+    text-align: center;
+    border-radius: 15px;
+}
+#box1{
+    background-color: red;
+    align-self: center;
+}
+#box2{
+    background-color: aqua;
+}
+#box3{
+    background-color: cadetblue;
+}
+#box4{
+    background-color: chocolate;
+}
+*/
+
+/* transformation property */
